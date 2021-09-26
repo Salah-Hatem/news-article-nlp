@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analysis</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Sentiment Analysis</h1>
+    </header>
+
+    <main>
+      <p>Enter a URL of an article / a blog to discover its sentiment.</p>
+      <section>
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <input
+            id="userInput"
+            type="text"
+            name="input"
+            value=""
+            placeholder="Enter URL here"
+          />
+          <input
+            class="submit"
+            type="submit"
+            name=""
+            value="submit"
+            onclick="return Client.handleSubmit(event)"
+            onsubmit="return handleSubmit(event)"
+          />
+        </form>
+      </section>
+
+      <section>
+        <strong>Form Results:</strong>
+        <div id="text"></div>
+        <div id="agreement"></div>
+        <div id="subjectivity"></div>
+        <div id="confidence"></div>
+        <div id="irony"></div>
+        <div id="score"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p>
+          Powered by
+          <a
+            href="https://www.meaningcloud.com/developer/sentiment-analysis/doc"
+            >Meaning Cloud Sentiment Analysis API</a
+          >
+        </p>
+        <p>Salah Hatem ©2021</p>
+      </div>
+    </footer>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

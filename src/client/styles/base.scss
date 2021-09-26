@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 2;
+  justify-content: center;
+  text-align: center;
+  margin: 2em;
+}
+
+p {
+  margin: 1em;
+}
+
+section {
+  max-width: 800px;
+  margin: 50px auto;
+}
